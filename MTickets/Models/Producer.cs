@@ -1,4 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 
 namespace MTickets.Models
 {
@@ -11,5 +16,9 @@ namespace MTickets.Models
         public string FullName { get; set; }
 
         public string Bio { get; set; }
+        
+        public List<Movie> Movies { get; set; }
+
+
     }
 }
