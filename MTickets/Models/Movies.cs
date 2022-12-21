@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MTickets.Models
 {
-    public class Movie 
+    public class Movie
     {
         [Key]
         public int Id { get; set; }
