@@ -31,6 +31,7 @@ namespace MTickets.Data
             base.OnModelCreating(modelBuilder);
 
         }
-     }
+        public DbSet<Actor> Actors{ get; set; }
+    }
  }
 
