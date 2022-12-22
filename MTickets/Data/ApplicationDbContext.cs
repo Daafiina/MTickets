@@ -32,6 +32,8 @@ namespace MTickets.Data
 
         }
         public DbSet<Actor> Actors{ get; set; }
+
+        public DbSet<Cinema> Cinema { get; set; }
     }
  }
 
