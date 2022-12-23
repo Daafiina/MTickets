@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using MTickets.Data.Enum;
 using MTickets.Models;
 using System;
 using System.Collections.Generic;
@@ -13,16 +12,16 @@ namespace MTickets.Data
     {
         public static void Seed(IApplicationBuilder applicationBuilder)
         {
-            using (var serviceScoope = applicationBuilder.ApplicationServices.CreateScope())
+            using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
-                var context = serviceScoope.ServiceProvider.GetService<ApplicationDbContext>();
+                var context = serviceScope.ServiceProvider.GetService<ApplicationDbContext>();
 
                 context.Database.EnsureCreated();
 
                 //Cinema
-                if(!context.Cinema.Any())
+                if(!context.Cinemas.Any())
                 {
-                    context.Cinema.AddRange(new List<Cinema>()
+                    context.Cinemas.AddRange(new List<Cinema>()
                     {
                         new Cinema()
                         { 
